@@ -1,2 +1,22 @@
-print("HelloWorld");
-println("I just wanted to be cool.");
+/* DIVS:  2D RECTNGLES
+*/
+//
+fullScreen(); //dispalyWidth //displayHeight
+println(displayWidth, displayHeight);
+int appWidth=displayWidth;
+int appHeight=displayHeight;
+// 
+float imageX=appWidth*1/4;
+float imageY=appHeight*25/100;
+float imageWidth=appWidth*1/2;
+float imageHeight=appHeight*1/2;
+float playX1=imageX+appWidth*1/4;
+float playY1=imageY+appHeight*1/2;
+float playX2=appWidth*1/4;
+float playY2=appHeight*1/2;
+float playX3=appWidth*1/4;
+float playY3=appHeight*1/2;
+//
+rect(imageX,imageY,imageWidth,imageHeight);
+//
+triangle(playX1,playY1,playX2,playY2,playX3,playY3);
