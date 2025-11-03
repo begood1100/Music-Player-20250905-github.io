@@ -7,10 +7,45 @@ int appWidth=displayWidth;
 int appHeight=displayHeight;
 // 
 //Ruler action of numbers, verfiy by changing ratio numbers from GUI DIVS
-float imageX = appWidth * 12.5/20;
-float imageY = appHeight * 13.5/16;
-float imageWidth = appWidth * 1/20;
-float imageHeight = appHeight * 1/16;
+float imagemuteX = appWidth * 8.5/20;
+float imagemuteY = appHeight * 13.5/16;
+float imagemuteWidth = appWidth * 1/20;
+float imagemuteHeight = appHeight * 1/16;
+
+float imageplayX = appWidth * 11.5/20;
+float imageplayY = appHeight * 13.5/16;
+float imageplayWidth = appWidth * 1/20;
+float imageplayHeight = appHeight * 1/16;
+
+float imagebackwardX = appWidth * 12.5/20;
+float imagebackwardY = appHeight * 13.5/16;
+float imagebackwardWidth = appWidth * 1/20;
+float imagebackwardHeight = appHeight * 1/16;
+
+float imagefastbackwardX = appWidth * 9.5/20;
+float imagefastbackwardY = appHeight * 13.5/16;
+float imagefastbackwardWidth = appWidth * 1/20;
+float imagefastbackwardHeight = appHeight * 1/16;
+
+float imageforwardX = appWidth * 10.5/20;
+float imageforwardY = appHeight * 13.5/16;
+float imageforwardWidth = appWidth * 1/20;
+float imageforwardHeight = appHeight * 1/16;
+
+float imagefastforwardX = appWidth * 13.5/20;
+float imagefastforwardY = appHeight * 13.5/16;
+float imagefastforwardWidth = appWidth * 1/20;
+float imagefastforwardHeight = appHeight * 1/16;
+
+float imagepauseX = appWidth * 14.5/20;
+float imagepauseY = appHeight * 13.5/16;
+float imagepauseWidth = appWidth * 1/20;
+float imagepauseHeight = appHeight * 1/16;
+
+float imagefullscreenX = appWidth * 15.5/20;
+float imagefullscreenY = appHeight * 13.5/16;
+float imagefullscreenWidth = appWidth * 1/20;
+float imagefullscreenHeight = appHeight * 1/16;
 
 float imagecoverX = appWidth * 1/20;
 float imagecoverY = appHeight * 1/16;
@@ -45,10 +80,16 @@ float imagesongHeight = appHeight * 4/16;
 
 //Paperfolding action of ratios, never changes
 //Order of operations: ruler + paperfloding = corrrect location 
-float stopX = imageX + imageWidth * 1/4;
-float stopY = imageY + imageHeight * 1/4;
-float stopWidth = imageWidth * 2/4;
-float stopHeight = imageHeight * 2/4;
+float stopX = imagemuteX + imagemuteWidth * 1/4;
+float stopY = imagemuteY + imagemuteHeight * 1/4;
+float stopWidth = imagemuteWidth * 2/4;
+float stopHeight = imagemuteHeight * 2/4;
+
+float pausestopX = imagepauseX + imagepauseWidth * 1/4;
+float pausestopY = imagepauseY + imagepauseHeight * 1/4;
+float pausestopWidth = imagepauseWidth * 2/4;
+float pausestopHeight = imagepauseHeight * 2/4;
+
 float mute1X1 = stopX;
 float mute1Y1 = stopY;
 float mute2X2 = mute1X1 + stopWidth;
@@ -57,22 +98,30 @@ float mute3X1 = mute2X2;
 float mute3Y1 = mute1Y1;
 float mute4X2 = mute1X1; //Cascading Varibles v one-reference
 float mute4Y2 = mute2Y2;
-float playX1 = imageX + imageWidth * 1/4;
-float playY1 = imageY + imageHeight * 1/4;
-float playX2 = imageX + imageWidth * 3/4;
-float playY2 = imageY + imageHeight * 1/2;
-float playX3 = imageX + imageWidth * 1/4;
-float playY3 = imageY + imageHeight * 3/4;
+float playX1 = imageplayX + imageplayWidth * 1/4;
+float playY1 = imageplayY + imageplayHeight * 1/4;
+float playX2 = imageplayX + imageplayWidth * 3/4;
+float playY2 = imageplayY + imageplayHeight * 1/2;
+float playX3 = imageplayX + imageplayWidth * 1/4;
+float playY3 = imageplayY + imageplayHeight * 3/4;
 //
-rect(imageX, imageY, imageWidth, imageHeight);
+rect(imagemuteX, imagemuteY, imagemuteWidth, imagemuteHeight);
 rect(imagecoverX, imagecoverY, imagecoverWidth, imagecoverHeight);
 rect(imagesongnameX, imagesongnameY, imagesongnameWidth, imagesongnameHeight);
 rect(imageartistnameX, imageartistnameY, imageartistnameWidth, imageartistnameHeight);
 //rect(imageplaylistX, imageplaylistY, imageplaylistWidth, imageplaylistHeight);
 rect(imageplaylist2X, imageplaylist2Y, imageplaylist2Width, imageplaylist2Height);
 rect(imagesongX, imagesongY, imagesongWidth, imagesongHeight);
+rect(imageplayX, imageplayY, imageplayWidth, imageplayHeight);
+rect(imagebackwardX, imagebackwardY, imagebackwardWidth, imagebackwardHeight);
+rect(imagefastbackwardX, imagefastbackwardY, imagefastbackwardWidth, imagefastbackwardHeight);
+rect(imageforwardX, imageforwardY, imageforwardWidth, imageforwardHeight);
+rect(imagefastforwardX, imagefastforwardY, imagefastforwardWidth, imagefastforwardHeight);
+rect(imagepauseX, imagepauseY, imagepauseWidth, imagepauseHeight);
+rect(imagefullscreenX, imagefullscreenY, imagefullscreenWidth, imagefullscreenHeight);
 //
+//rect(pausestopX, pausestopY, pausestopWidth, pausestopHeight);
 rect(stopX, stopY, stopWidth, stopHeight);
-//triangle(playX1, playY1, playX2, playY2, playX3, playY3);
+triangle(playX1, playY1, playX2, playY2, playX3, playY3);
 line(mute1X1, mute1Y1, mute2X2, mute2Y2);
 line(mute3X1, mute3Y1, mute4X2, mute4Y2);
