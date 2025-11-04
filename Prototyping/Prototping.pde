@@ -77,6 +77,21 @@ float imagesongY = appHeight * 1.5/16;
 float imagesongWidth = appWidth * 7/20;
 float imagesongHeight = appHeight * 4/16;
 
+float imagesongname2X = appWidth * 9.5/20;
+float imagesongname2Y = appHeight * 1.5/16;
+float imagesongname2Width = appWidth * 7/20;
+float imagesongname2Height = appHeight * 4/16;
+
+float imageelpaseX = appWidth * 9.5/20;
+float imageplpaseY = appHeight * 1.5/16;
+float imageelpaseWidth = appWidth * 7/20;
+float imageelpaseHeight = appHeight * 4/16;
+
+float imagelyricsX = appWidth * 9.5/20;
+float imagelyricsY = appHeight * 1.5/16;
+float imagelyricsWidth = appWidth * 7/20;
+float imagelyricsHeight = appHeight * 4/16;
+
 
 //Paperfolding action of ratios, never changes
 //Order of operations: ruler + paperfloding = corrrect location 
@@ -104,6 +119,13 @@ float playX2 = imageplayX + imageplayWidth * 3/4;
 float playY2 = imageplayY + imageplayHeight * 1/2;
 float playX3 = imageplayX + imageplayWidth * 1/4;
 float playY3 = imageplayY + imageplayHeight * 3/4;
+
+float backwardX1 = imagebackwardX + imagebackwardWidth * 1/2;
+float backwardY1 = imagebackwardY + imagebackwardHeight * 1/2;
+float backwardX2 = imagebackwardX + imagebackwardWidth * 3/4;
+float backwardY2 = imagebackwardY + imagebackwardHeight * 1/4;
+float backwardX3 = imagebackwardX + imagebackwardWidth * 3/4;
+float backwardY3 = imagebackwardY + imagebackwardHeight * 3/4;
 //
 rect(imagemuteX, imagemuteY, imagemuteWidth, imagemuteHeight);
 rect(imagecoverX, imagecoverY, imagecoverWidth, imagecoverHeight);
@@ -112,6 +134,9 @@ rect(imageartistnameX, imageartistnameY, imageartistnameWidth, imageartistnameHe
 //rect(imageplaylistX, imageplaylistY, imageplaylistWidth, imageplaylistHeight);
 rect(imageplaylist2X, imageplaylist2Y, imageplaylist2Width, imageplaylist2Height);
 rect(imagesongX, imagesongY, imagesongWidth, imagesongHeight);
+//rect(imagesongname2X, imagesongname2Y, imagesongname2Width, imagesongname2Height);
+//rect(imageelpaseX, imageelpaseY, imageelpaseWidth, imageelpaseHeight);
+//rect(imagelyricsX, imagelyricsY, imagelyricsWidth, imagelyricsHeight);
 rect(imageplayX, imageplayY, imageplayWidth, imageplayHeight);
 rect(imagebackwardX, imagebackwardY, imagebackwardWidth, imagebackwardHeight);
 rect(imagefastbackwardX, imagefastbackwardY, imagefastbackwardWidth, imagefastbackwardHeight);
@@ -121,7 +146,10 @@ rect(imagepauseX, imagepauseY, imagepauseWidth, imagepauseHeight);
 rect(imagefullscreenX, imagefullscreenY, imagefullscreenWidth, imagefullscreenHeight);
 //
 //rect(pausestopX, pausestopY, pausestopWidth, pausestopHeight);
-rect(stopX, stopY, stopWidth, stopHeight);
+//rect(stopX, stopY, stopWidth, stopHeight);
 triangle(playX1, playY1, playX2, playY2, playX3, playY3);
+triangle(backwardX1, backwardY1, backwardX2, backwardY2, backwardX3, backwardY3);
+
 line(mute1X1, mute1Y1, mute2X2, mute2Y2);
 line(mute3X1, mute3Y1, mute4X2, mute4Y2);
+//square(nameX, nameY, nameDimension)
