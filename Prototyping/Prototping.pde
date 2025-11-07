@@ -124,6 +124,37 @@ float backwardY2 = imagebackwardY + imagebackwardHeight * 1/4;
 float backwardX3 = imagebackwardX + imagebackwardWidth * 3/4;
 float backwardY3 = imagebackwardY + imagebackwardHeight * 3/4;
 
+
+
+
+float fastbackwardX1 = imagefastbackwardX + imagefastbackwardWidth * 1/2;
+float fastbackwardY1 = imagefastbackwardY + imagefastbackwardHeight * 1/2;
+float fastbackwardX2 = imagefastbackwardX + imagefastbackwardWidth * 3/4;
+float fastbackwardY2 = imagefastbackwardY + imagefastbackwardHeight * 1/4;
+float fastbackwardX3 = imagefastbackwardX + imagefastbackwardWidth * 3/4;
+float fastbackwardY3 = imagefastbackwardY + imagefastbackwardHeight * 3/4;
+
+float fastbackwardX1_2 = fastbackwardX1 - imagefastbackwardWidth * 1/4;
+float fastbackwardY1_2 = fastbackwardY1;
+float fastbackwardX2_2 = fastbackwardX2 - imagefastbackwardWidth * 1/4;
+float fastbackwardY2_2 = fastbackwardY2;
+float fastbackwardX3_2 = fastbackwardX3 - imagefastbackwardWidth * 1/4;
+float fastbackwardY3_2 = fastbackwardY3;
+
+float fastforwardX1 = imagefastforwardX + imagefastforwardWidth * 1/4;
+float fastforwardY1 = imagefastforwardY + imagefastforwardHeight * 1/4;
+float fastforwardX2 = imagefastforwardX + imagefastforwardWidth * 1/2;
+float fastforwardY2 = imagefastforwardY + imagefastforwardHeight * 1/2;
+float fastforwardX3 = imagefastforwardX + imagefastforwardWidth * 1/4;
+float fastforwardY3 = imagefastforwardY + imagefastforwardHeight * 3/4;
+
+float fastforwardX1_2 = fastforwardX1 + imagefastforwardWidth * 1/4;
+float fastforwardY1_2 = fastforwardY1;
+float fastforwardX2_2 = fastforwardX2 + imagefastforwardWidth * 1/4;
+float fastforwardY2_2 = fastforwardY2;
+float fastforwardX3_2 = fastforwardX3 + imagefastforwardWidth * 1/4;
+float fastforwardY3_2 = fastforwardY3;
+
 float backwardX = imagemuteX + imagemuteWidth * 1/4;
 float backwardY = imagemuteY + imagemuteHeight * 1/4;
 float backwardWidth = imagemuteWidth * 2/4;
@@ -151,8 +182,14 @@ rect(imagefullscreenX, imagefullscreenY, imagefullscreenWidth, imagefullscreenHe
 //rect(pausestopX, pausestopY, pausestopWidth, pausestopHeight);
 rect(stopX, stopY, stopWidth, stopHeight);
 triangle(playX1, playY1, playX2, playY2, playX3, playY3);
+
+
+//rect(backwardX1, backwardY1, backwardX2, backwardY2, backwardX3, backwardY3, backwardX4, backwardY4);
 triangle(backwardX1, backwardY1, backwardX2, backwardY2, backwardX3, backwardY3);
-rect(backwardX, backwardY, backwardWidth, backwardHeight);
-//line(mute1X1, mute1Y1, mute2X2, mute2Y2);
-//line(mute3X1, mute3Y1, mute4X2, mute4Y2);
+triangle(fastbackwardX1, fastbackwardY1, fastbackwardX2, fastbackwardY2, fastbackwardX3, fastbackwardY3);
+triangle(fastbackwardX1_2, fastbackwardY1_2, fastbackwardX2_2, fastbackwardY2_2, fastbackwardX3_2, fastbackwardY3_2);
+triangle(fastforwardX1, fastforwardY1, fastforwardX2, fastforwardY2, fastforwardX3, fastforwardY3);
+triangle(fastforwardX1_2, fastforwardY1_2, fastforwardX2_2, fastforwardY2_2, fastforwardX3_2, fastforwardY3_2);
+line(mute1X1, mute1Y1, mute2X2, mute2Y2);
+line(mute3X1, mute3Y1, mute4X2, mute4Y2);
 //square(nameX, nameY, nameDimension)
