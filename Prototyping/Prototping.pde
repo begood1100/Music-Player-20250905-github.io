@@ -52,18 +52,18 @@ float imagecoverY = appHeight * 1/16;
 float imagecoverWidth = appWidth * 6/20;
 float imagecoverHeight = appHeight * 5/16;
 
-float imagesearchX = appWidth * 0/20;
-float imagesearchY = appHeight * 0/16;
+float imagesearchX = appWidth * 0.1/20;
+float imagesearchY = appHeight * 0.1/16;
 float imagesearchWidth = appWidth * 0.5/20;
 float imagesearchHeight = appHeight * 0.5/16;
 
 float imagemenuX = appWidth * 18.5/20;
-float imagemenuY = appHeight * 0.5/16;
+float imagemenuY = appHeight * 0.1/16;
 float imagemenuWidth = appWidth * 0.5/20;
 float imagemenuHeight = appHeight * 0.5/16;
 
-float imagecloseX = appWidth * 19.5/20;
-float imagecloseY = appHeight * 0.5/16;
+float imagecloseX = appWidth * 19.2/20;
+float imagecloseY = appHeight * 0.1/16;
 float imagecloseWidth = appWidth * 0.5/20;
 float imagecloseHeight = appHeight * 0.5/16;
 
@@ -99,13 +99,18 @@ float imagesongname2Height = appHeight * 0.5/16;
 
 float imageElpaseX = appWidth * 9.5/20;
 float imageElpaseY = appHeight * 7/16;
-float imageElpaseWidth = appWidth * 1/20;
+float imageElpaseWidth = appWidth * 7/20;
 float imageElpaseHeight = appHeight * 1/16;
 
+float imageheartX = appWidth * 16/20;
+float imageheartY = appHeight * 6.5/16;
+float imageheartWidth = appWidth * 0.5/20;
+float imageheartHeight = appHeight * 0.5/16;
+
 float imagelyricsX = appWidth * 10.5/20;
-float imagelyricsY = appHeight * 8/16;
+float imagelyricsY = appHeight * 9/16;
 float imagelyricsWidth = appWidth * 5/20;
-float imagelyricsHeight = appHeight * 2/16;
+float imagelyricsHeight = appHeight * 4/16;
 
 
 //Paperfolding action of ratios, never changes
@@ -139,6 +144,12 @@ float backwardY2 = imagebackwardY + imagebackwardHeight * 1/4;
 float backwardX3 = imagebackwardX + imagebackwardWidth * 3/4;
 float backwardY3 = imagebackwardY + imagebackwardHeight * 3/4;
 
+float backwardRectX = backwardX2 + imagebackwardWidth * 1 / 8; // Positioned slightly in front of the triangle
+float backwardRectY = imagebackwardY + imagebackwardHeight * 1 / 4;
+float backwardRectWidth = imagebackwardWidth * 1 / 8; // Width of the rectangle
+float backwardRectHeight = imagebackwardHeight * 1 / 2; // Height of the rectangle
+
+
 
 
 
@@ -170,11 +181,6 @@ float fastforwardY2_2 = fastforwardY2;
 float fastforwardX3_2 = fastforwardX3 + imagefastforwardWidth * 1/4;
 float fastforwardY3_2 = fastforwardY3;
 
-float backwardX = imagemuteX + imagemuteWidth * 1/4;
-float backwardY = imagemuteY + imagemuteHeight * 1/4;
-float backwardWidth = imagemuteWidth * 2/4;
-float backwardHeight = imagemuteHeight * 2/4;
-
 //
 rect(imagemuteX, imagemuteY, imagemuteWidth, imagemuteHeight);
 rect(imagemenuX, imagemenuY, imagemenuWidth, imagemenuHeight);
@@ -196,6 +202,7 @@ rect(imageforwardX, imageforwardY, imageforwardWidth, imageforwardHeight);
 rect(imagefastforwardX, imagefastforwardY, imagefastforwardWidth, imagefastforwardHeight);
 rect(imagepauseX, imagepauseY, imagepauseWidth, imagepauseHeight);
 rect(imagefullscreenX, imagefullscreenY, imagefullscreenWidth, imagefullscreenHeight);
+rect(imageheartX, imageheartY, imageheartWidth, imageheartHeight);
 //
 //rect(pausestopX, pausestopY, pausestopWidth, pausestopHeight);
 rect(stopX, stopY, stopWidth, stopHeight);
@@ -204,6 +211,9 @@ triangle(playX1, playY1, playX2, playY2, playX3, playY3);
 
 //rect(backwardX1, backwardY1, backwardX2, backwardY2, backwardX3, backwardY3, backwardX4, backwardY4);
 triangle(backwardX1, backwardY1, backwardX2, backwardY2, backwardX3, backwardY3);
+rect(backwardRectX, backwardRectY, backwardRectWidth, backwardRectHeight);
+
+
 triangle(fastbackwardX1, fastbackwardY1, fastbackwardX2, fastbackwardY2, fastbackwardX3, fastbackwardY3);
 triangle(fastbackwardX1_2, fastbackwardY1_2, fastbackwardX2_2, fastbackwardY2_2, fastbackwardX3_2, fastbackwardY3_2);
 triangle(fastforwardX1, fastforwardY1, fastforwardX2, fastforwardY2, fastforwardX3, fastforwardY3);
