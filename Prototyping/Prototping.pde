@@ -52,6 +52,21 @@ float imagecoverY = appHeight * 1/16;
 float imagecoverWidth = appWidth * 6/20;
 float imagecoverHeight = appHeight * 5/16;
 
+float imagesearchX = appWidth * 0/20;
+float imagesearchY = appHeight * 0/16;
+float imagesearchWidth = appWidth * 0.5/20;
+float imagesearchHeight = appHeight * 0.5/16;
+
+float imagemenuX = appWidth * 18.5/20;
+float imagemenuY = appHeight * 0.5/16;
+float imagemenuWidth = appWidth * 0.5/20;
+float imagemenuHeight = appHeight * 0.5/16;
+
+float imagecloseX = appWidth * 19.5/20;
+float imagecloseY = appHeight * 0.5/16;
+float imagecloseWidth = appWidth * 0.5/20;
+float imagecloseHeight = appHeight * 0.5/16;
+
 float imagesongnameX = appWidth * 1.5/20;
 float imagesongnameY = appHeight * 6.5/16;
 float imagesongnameWidth = appWidth * 4.5/20;
@@ -162,6 +177,9 @@ float backwardHeight = imagemuteHeight * 2/4;
 
 //
 rect(imagemuteX, imagemuteY, imagemuteWidth, imagemuteHeight);
+rect(imagemenuX, imagemenuY, imagemenuWidth, imagemenuHeight);
+rect(imagesearchX, imagesearchY, imagesearchWidth, imagesearchHeight);
+rect(imagecloseX, imagecloseY, imagecloseWidth, imagecloseHeight);
 rect(imagecoverX, imagecoverY, imagecoverWidth, imagecoverHeight);
 rect(imagesongnameX, imagesongnameY, imagesongnameWidth, imagesongnameHeight);
 rect(imageartistnameX, imageartistnameY, imageartistnameWidth, imageartistnameHeight);
