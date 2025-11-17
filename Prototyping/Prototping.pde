@@ -137,17 +137,6 @@ float playY2 = imageplayY + imageplayHeight * 1/2;
 float playX3 = imageplayX + imageplayWidth * 1/4;
 float playY3 = imageplayY + imageplayHeight * 3/4;
 
-float backwardX1 = imagebackwardX + imagebackwardWidth * 1/2;
-float backwardY1 = imagebackwardY + imagebackwardHeight * 1/2;
-float backwardX2 = imagebackwardX + imagebackwardWidth * 3/4;
-float backwardY2 = imagebackwardY + imagebackwardHeight * 1/4;
-float backwardX3 = imagebackwardX + imagebackwardWidth * 3/4;
-float backwardY3 = imagebackwardY + imagebackwardHeight * 3/4;
-
-float backwardRectX = backwardX2 + imagebackwardWidth * 1 / 8; // Positioned slightly in front of the triangle
-float backwardRectY = imagebackwardY + imagebackwardHeight * 1 / 4;
-float backwardRectWidth = imagebackwardWidth * 1 / 8; // Width of the rectangle
-float backwardRectHeight = imagebackwardHeight * 1 / 2; // Height of the rectangle
 
 
 
@@ -181,6 +170,38 @@ float fastforwardY2_2 = fastforwardY2;
 float fastforwardX3_2 = fastforwardX3 + imagefastforwardWidth * 1/4;
 float fastforwardY3_2 = fastforwardY3;
 
+
+float pauseBar1X = imagepauseX + imagepauseWidth * 1 / 4; // Positioned inside the outer rectangle
+float pauseBar1Y = imagepauseY + imagepauseHeight * 1 / 4;
+float pauseBar1Width = imagepauseWidth * 1 / 8; // Width of the first bar
+float pauseBar1Height = imagepauseHeight * 1 / 2; // Height of the first bar
+
+
+float pauseBar2X = pauseBar1X + pauseBar1Width + imagepauseWidth * 1 / 8; // Positioned to the right of the first bar
+float pauseBar2Y = pauseBar1Y;
+float pauseBar2Width = pauseBar1Width; // Same width as the first bar
+float pauseBar2Height = pauseBar1Height; // Same height as the first bar
+
+
+//float backwardTriX1 = backwardRectX + backwardRectWidth + imagebackwardWidth * 1 / 8; // Start after the rectangle
+//float backwardTriY1 = imagebackwardY + imagebackwardHeight * 1 / 2;
+//float backwardTriX2 = backwardTriX1 + imagebackwardWidth * 1 / 4;
+//float backwardTriY2 = imagebackwardY + imagebackwardHeight * 1 / 4;
+//float backwardTriX3 = backwardTriX1 + imagebackwardWidth * 1 / 4;
+//float backwardTriY3 = imagebackwardY + imagebackwardHeight * 3 / 4;
+
+float backwardRectX = imagebackwardX + imagebackwardWidth * 1 / 4; // Positioned inside the outer rectangle
+float backwardRectY = imagebackwardY + imagebackwardHeight * 1 / 4;
+float backwardRectWidth = imagebackwardWidth * 1 / 8; // Width of the rectangle
+float backwardRectHeight = imagebackwardHeight * 1 / 2; // Height of the rectangle
+
+
+
+
+
+
+
+
 //
 rect(imagemuteX, imagemuteY, imagemuteWidth, imagemuteHeight);
 rect(imagemenuX, imagemenuY, imagemenuWidth, imagemenuHeight);
@@ -209,10 +230,6 @@ rect(stopX, stopY, stopWidth, stopHeight);
 triangle(playX1, playY1, playX2, playY2, playX3, playY3);
 
 
-//rect(backwardX1, backwardY1, backwardX2, backwardY2, backwardX3, backwardY3, backwardX4, backwardY4);
-triangle(backwardX1, backwardY1, backwardX2, backwardY2, backwardX3, backwardY3);
-rect(backwardRectX, backwardRectY, backwardRectWidth, backwardRectHeight);
-
 
 triangle(fastbackwardX1, fastbackwardY1, fastbackwardX2, fastbackwardY2, fastbackwardX3, fastbackwardY3);
 triangle(fastbackwardX1_2, fastbackwardY1_2, fastbackwardX2_2, fastbackwardY2_2, fastbackwardX3_2, fastbackwardY3_2);
@@ -220,4 +237,13 @@ triangle(fastforwardX1, fastforwardY1, fastforwardX2, fastforwardY2, fastforward
 triangle(fastforwardX1_2, fastforwardY1_2, fastforwardX2_2, fastforwardY2_2, fastforwardX3_2, fastforwardY3_2);
 line(mute1X1, mute1Y1, mute2X2, mute2Y2);
 line(mute3X1, mute3Y1, mute4X2, mute4Y2);
+rect(pauseBar2X, pauseBar2Y, pauseBar2Width, pauseBar2Height);
+rect(pauseBar1X, pauseBar1Y, pauseBar1Width, pauseBar1Height);
+
+//triangle(backwardTriX1, backwardTriY1, backwardTriX2, backwardTriY2, backwardTriX3, backwardTriY3);
+
+//rect(backwardRectX, backwardRectY, backwardRectWidth, backwardRectHeight);
+
+
+
 //square(nameX, nameY, nameDimension)
