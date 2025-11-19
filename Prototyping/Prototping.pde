@@ -170,20 +170,30 @@ float fastforwardY2_2 = fastforwardY2;
 float fastforwardX3_2 = fastforwardX3 + imagefastforwardWidth * 1/4;
 float fastforwardY3_2 = fastforwardY3;
 
-//float backwardBarTriX1 = backwardBarX - imagebackwardWidth * 1 / 8; // Positioned to the left of the rectangle
-//float backwardBarTriY1 = imagebackwardY + imagebackwardHeight * 1 / 2;
-//float backwardBarTriX2 = backwardBarTriX1 - imagebackwardWidth * 1 / 4;
-//float backwardBarTriY2 = imagebackwardY + imagebackwardHeight * 1 / 4;
-//float backwardBarTriX3 = backwardBarTriX1 - imagebackwardWidth * 1 / 4;
-//float backwardBarTriY3 = imagebackwardY + imagebackwardHeight * 3 / 4;
-
-
 float backwardBarX = imagebackwardX + imagebackwardWidth * 1 / 4; // Positioned inside the outer rectangle
 float backwardBarY = imagebackwardY + imagebackwardHeight * 1 / 4;
 float backwardBarWidth = imagebackwardWidth * 1 / 8; // Width of the rectangle
 float backwardBarHeight = imagebackwardHeight * 1 / 2; // Height of the rectangle
 
+float backwardBarTriX1 = backwardBarX - imagebackwardWidth * 1 / 8; // Positioned to the left of the rectangle
+float backwardBarTriY1 = imagebackwardY + imagebackwardHeight * 1 / 2;
+float backwardBarTriX2 = backwardBarTriX1 - imagebackwardWidth * 1 / 4;
+float backwardBarTriY2 = imagebackwardY + imagebackwardHeight * 1 / 4;
+float backwardBarTriX3 = backwardBarTriX1 - imagebackwardWidth * 1 / 4;
+float backwardBarTriY3 = imagebackwardY + imagebackwardHeight * 3 / 4;
 
+
+float forwardBarX = imageforwardX + imageforwardWidth * 3 / 4; // Positioned inside the outer rectangle
+float forwardBarY = imageforwardY + imageforwardHeight * 1 / 4;
+float forwardBarWidth = imageforwardWidth * 1 / 8; // Width of the rectangle
+float forwardBarHeight = imageforwardHeight * 1 / 2; // Height of the rectangle
+
+float forwardBarTriX1 = forwardBarX - imageforwardWidth * 1 / 8; // Positioned to the left of the rectangle
+float forwardBarTriY1 = imageforwardY + imageforwardHeight * 1 / 2;
+float forwardBarTriX2 = forwardBarTriX1 - imageforwardWidth * 1 / 4;
+float forwardBarTriY2 = imageforwardY + imageforwardHeight * 1 / 4;
+float forwardBarTriX3 = forwardBarTriX1 - imageforwardWidth * 1 / 4;
+float forwardBarTriY3 = imageforwardY + imageforwardHeight * 3 / 4;
 
 float pauseBar1X = imagepauseX + imagepauseWidth * 1 / 4; // Positioned inside the outer rectangle
 float pauseBar1Y = imagepauseY + imagepauseHeight * 1 / 4;
@@ -233,6 +243,53 @@ line(mute3X1, mute3Y1, mute4X2, mute4Y2);
 rect(pauseBar2X, pauseBar2Y, pauseBar2Width, pauseBar2Height);
 rect(pauseBar1X, pauseBar1Y, pauseBar1Width, pauseBar1Height);
 
-//triangle(backwardBarTriX1, backwardBarTriY1, backwardBarTriX2, backwardBarTriY2, backwardBarTriX3, backwardBarTriY3);
+triangle(backwardBarTriX1, backwardBarTriY1, backwardBarTriX2, backwardBarTriY2, backwardBarTriX3, backwardBarTriY3);
 rect(backwardBarX, backwardBarY, backwardBarWidth, backwardBarHeight);
+
+
+triangle(forwardBarTriX1, forwardBarTriY1, forwardBarTriX2, forwardBarTriY2, forwardBarTriX3, forwardBarTriY3);
+rect(forwardBarX, forwardBarY, forwardBarWidth, forwardBarHeight);
+
 //square(nameX, nameY, nameDimension)
+// ===== RATIOS (fractions only) =====
+float barWRatio = 1.0/10.0;   // 1/10
+float barHRatio = 1.0/2.0;    // 1/2
+float barXRatio = 3.0/4.0;    // 3/4
+float barYRatio = 1.0/4.0;    // 1/4
+
+float triWRatio  = 1.0/5.0;   // 1/5
+float triHRatio  = 3.0/10.0;  // 3/10
+float triGapRatio = 1.0/20.0; // 1/20 (gap between bar and triangle)
+
+
+// ===== BAR (rectangle) =====
+float forwardBarX = imageforwardX + imageforwardWidth * barXRatio;
+float forwardBarY = imageforwardY + imageforwardHeight * barYRatio;
+
+float forwardBarWidth  = imageforwardWidth  * barWRatio;
+float forwardBarHeight = imageforwardHeight * barHRatio;
+
+rect(forwardBarX, forwardBarY, forwardBarWidth, forwardBarHeight);
+
+
+// ===== TRIANGLE (►) =====
+
+// Center Y position for triangle = 1/2 of height
+float triCenterY = imageforwardY + imageforwardHeight * (1.0/2.0);
+
+// Triangle size
+float triWidth  = imageforwardWidth  * triWRatio;
+float triHeight = imageforwardHeight * triHRatio;
+
+// Triangle coordinates
+float triX1 = forwardBarX - imageforwardWidth * triGapRatio; // tip
+float triY1 = triCenterY;
+
+float triX2 = triX1 - triWidth;
+float triY2 = triCenterY - triHeight / 2;
+
+float triX3 = triX1 - triWidth;
+float triY3 = triCenterY + triHeight / 2;
+
+// Draw triangle
+triangle(triX1, triY1, triX2, triY2, triX3, triY3);
