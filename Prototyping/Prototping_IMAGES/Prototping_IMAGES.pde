@@ -11,4 +11,7 @@ println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t
 //
 //Image Aspect Ratio Vars & Algorithm
 //Directory or Pathway, Concatenation
-String upArrow = ../../; 
+String upArrow = "../../"; 
+String folder = "music image Folder/Images/";
+String bike = "bike";
+String fileExtensionJPG = ".jpg";
