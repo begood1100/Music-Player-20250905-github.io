@@ -18,16 +18,16 @@ float imageDivHeight = appHeight * 4/5;
 //Image Aspect Ratio Vars & Algorithm
 //Directory or Pathway, Concatenation
 String upArrow = "../../"; 
-String folder = "music image Folder/Images/"; //**Awkward
-String bike = "bike";
+String folder = "lesson/"; //**Awkward
+String microphone = "microphone";
 String fileExtensionJPG = ".jpg";
-String imagePathway1 = upArrow + folder + bike + fileExtensionJPG;
-println("Bike Pathway:", imagePathway1);
+String imagePathway1 = upArrow + folder + microphone + fileExtensionJPG;
+println("microphone Pathway:", imagePathway1);
 //
 //Imge Loading & Aspect Ratio
 PImage image1 = loadImage(imagePathway1);
-int imageWidth1 = 6000; //Hardcoded
-int imageHeight1 = 4000; //Hardcored
+int imageWidth1 = 600; //Hardcoded
+int imageHeight1 = 400; //Hardcored
 //float image1AspectRatio_GreaterOne = ()? : ;
 //
 //DIV
