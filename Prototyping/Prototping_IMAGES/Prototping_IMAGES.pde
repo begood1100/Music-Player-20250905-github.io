@@ -4,7 +4,7 @@
 //
 //Display
 fullScreen(); //Landscape
-//size(500, 700); //Portrait
+//size(500, 250); //Portrait
 int appWidth = displayWidth; //width
 int appHeight = displayHeight; //height
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\t\t\tFullScreen, displayWidth:"+displayWidth, "displayHeight:"+displayHeight, "\n\t\t\t\t\t\t\t\tsize\t\t, width:"+width, "height:"+height);
@@ -45,7 +45,12 @@ println("After casting added, Aspect Ratio >1:", image1AspectRatio_GreaterOne);
 //Aspect Ratio
 float imageWidthAdjusted1 = imageDivWidth;
 float imageHeightAdjusted1 = (imageWidth1>= imageDivWidth ) ? imageWidthAdjusted1 / image1AspectRatio_GreaterOne : imageWidthAdjusted1 / image1AspectRatio_GreaterOne ; // Ternary Operator
-
+//Verification: looks good
+if ( imageHeightAdjusted1 > imageDivHeight ) {
+  println( "Image doesn't fit, program endeed ... Fatal Flaw, must be solved ... Image doesn't show...");
+  exit();
+  //
+}
 /*
 imageWidth1
 imageDivWidth
@@ -54,8 +59,6 @@ imageDivHeight
 imageDivWidth, imageDivHeight
 */
 //if () {} else {} //End IF Aspect Ratio
-
-
 
 //DIV
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
