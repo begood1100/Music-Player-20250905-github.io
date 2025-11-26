@@ -28,12 +28,25 @@ PImage image1 = loadImage(imagePathway1);
 int imageWidth1 = 6000; //Hardcoded
 int imageHeight1 = 4000; //Hardcored
 //Aspect Ratio
+//Aspect Ratio
 float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageHeight1)/float(imageWidth1) ; //Ternary Operator
-//Hardcore Greater-Than-One Aspect Ratio
-//How to make imge bigger or smaller
-//Error: truncating, casting
-println("AspectRatio >1", image1AspectRatio_GreaterOne, "Testing for Decimals, formulas", imageWidth1/imageHeight1 );
-//Aligorithm Decisions
+//ERROR, int populating float: truncating-adding zeros, casting
+/* Line Notes
+- Hardcoded Greater-Than-One Aspect Ratio, x or / >1 or <1
+- 2D information from Image, Apsect Ratio Number
+- Answers how to make image bigger or smaller
+- Computer calculated DIV width & height
+- Computer needs to compare image to DIV size difference
+*/
+println("Testing for Decimals, formula unsing ints:", imageWidth1/imageHeight1);
+println("After casting added, Aspect Ratio >1:", image1AspectRatio_GreaterOne);
+
+//Algorithm Decisions (choice)
+//Aspect Ratio
+float imageWidthAdjusted1 = imageDivWidth;
+float imageHeightAdjusted = (imageWidth1) ? : ; // Ternary Operator
+, imageHeightAdjusted
+
 /*
 imageWidth1
 imageDivWidth
@@ -41,13 +54,14 @@ imageHeight1
 imageDivHeight
 imageDivWidth, imageDivHeight
 */
+//if () {} else {} //End IF Aspect Ratio
 
 
-//if () else {} //End IF Aspect Ratio
-//
 
 //DIV
-rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
+rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //
-image(image1, imageDivX, imageDivY, imageWidth1, imageHeight1); //Adjusted
-//image(image1, imageDivX, imageDivY, imageWidthAdjusted, imageHeightAdjusted);
+image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
+//image( image1, imageDivX, imageDivY, imageWidthAdjusted, imageHeightAdjusted );
+//
+//End Program
