@@ -44,8 +44,7 @@ println("After casting added, Aspect Ratio >1:", image1AspectRatio_GreaterOne);
 //Algorithm Decisions (choice)
 //Aspect Ratio
 float imageWidthAdjusted1 = imageDivWidth;
-float imageHeightAdjusted = (imageWidth1) ? : ; // Ternary Operator
-, imageHeightAdjusted
+float imageHeightAdjusted1 = (imageWidth1>= imageDivWidth ) ? imageWidthAdjusted1 / image1AspectRatio_GreaterOne : imageWidthAdjusted1 / image1AspectRatio_GreaterOne ; // Ternary Operator
 
 /*
 imageWidth1
@@ -61,7 +60,6 @@ imageDivWidth, imageDivHeight
 //DIV
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //
-image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
-//image( image1, imageDivX, imageDivY, imageWidthAdjusted, imageHeightAdjusted );
+//image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
+image( image1, imageDivX, imageDivY, imageWidthAdjusted1, imageHeightAdjusted1 );
 //
-//End Program
