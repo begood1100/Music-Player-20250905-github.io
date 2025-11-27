@@ -19,14 +19,18 @@ float imageDivHeight = appHeight * 4/5; //**
 //Directory or Pathway, Concatenation
 String upArrow = "../../"; 
 String folder = "lesson/images/"; //**Awkward
-String microphone = "microphonee";
+String microphone = "microphone";
 String fileExtensionJPG = ".jpg";
 String imagePathway1 = upArrow + folder + microphone + fileExtensionJPG;
 println("microphone Pathway:", imagePathway1);
 //Imge Loading & Aspect Ratio
-PImage image1 = loadImage(imagePathway1);
-if (image == null ) {
-  printn("NullPointerException on Image ... Spelling Mistake. ");
+
+PImage errorImage = loadImage("errorImage.png");
+PImage image1 = loadImage(imagePathway1); // pathway mispelled
+if (image1 == null ) {
+  println("NullPointerException on Image ... Spelling Mistake. ");
+  image1 = errorImage;
+  exit();
 }
 //
 int imageWidth1 = 6000; //Hardcoded
@@ -53,6 +57,11 @@ float imageHeightAdjusted1 = (imageWidth1>= imageDivWidth ) ? imageWidthAdjusted
 if ( imageHeightAdjusted1 > imageDivHeight ) {
   println( "Image doesn't fit, program ended ... Fatal Flaw, must be solved ... Image doesn't show...");
   exit();
+  while (imageHeightAdjusted1>imageDivHeight) {
+    imageWidthAdjusted1 *= 0.99;
+    imageHeightAdjusted1 = imageWidthAdjusted1/image1AspectRatio_GreaterOne;
+    //println("Inspection of percent decrase:", imageWidthAdjusted1, imageHeightAdjusted)
+  }
   //
 }
 
