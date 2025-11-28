@@ -3,8 +3,8 @@
 */
 //
 //Display
-fullScreen(); //Landscape
-//size(500, 250); //Portrait
+//fullScreen(); //Landscape
+size(500, 250); //Portrait
 int appWidth = displayWidth; //width
 int appHeight = displayHeight; //height
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\t\t\tFullScreen, displayWidth:"+displayWidth, "displayHeight:"+displayHeight, "\n\t\t\t\t\t\t\t\tsize\t\t, width:"+width, "height:"+height);
@@ -13,7 +13,7 @@ int appHeight = displayHeight; //height
 float imageDivX = appWidth * 1/4;
 float imageDivY = appHeight * 1/10;
 float imageDivWidth = appWidth * 1/2;
-float imageDivHeight = appHeight * 4/5; //** 
+float imageDivHeight = appHeight * 1/5; //** //4/5
 //
 //Image Aspect Ratio Vars & Algorithm
 //Directory or Pathway, Concatenation
@@ -57,16 +57,25 @@ float imageHeightAdjusted1 = (imageWidth1>= imageDivWidth ) ? imageWidthAdjusted
 if ( imageHeightAdjusted1 > imageDivHeight ) {
   println( "Image doesn't fit, program ended ... Fatal Flaw, must be solved ... Image doesn't show...");
   exit();
-  while (imageHeightAdjusted1>imageDivHeight) {
-    imageWidthAdjusted1 *= 0.99;
+  int indexWhile = 0; //Local Variable to If-Statement
+  while (imageHeightAdjusted1<imageDivHeight) {
+    println("Iteration of Percent While Loop", indexWhile++); //print value, then add one, order is important in AP
+    if ( indexWhile < 10000) {
+      //Checking Image Size 
+    } else {
+      //ERROR: Infinite Loop
+      println("ERROR: infinite loop, Image Percent While, Value:", indexWhile);
+      exit();
+      imageHeightAdjusted1=imageDivHeight; //makes while false, stops while
+    }//End Check Infinite loop
+    //Image Adjustment
+    imageWidthAdjusted1 *= 0.70; //;-= 1
     imageHeightAdjusted1 = imageWidthAdjusted1/image1AspectRatio_GreaterOne;
-    //println("Inspection of percent decrase:", imageWidthAdjusted1, imageHeightAdjusted)
-  }
+    println("Inspection of percent decrase:", imageWidthAdjusted1, imageHeightAdjusted1);
+}//End While
   //
-}
-
+}//End If
 //if () {} else {} //End IF Aspect Ratio
-
 //DIV
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //
