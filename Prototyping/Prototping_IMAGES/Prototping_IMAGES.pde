@@ -3,12 +3,14 @@
 */
 //
 //Display
-//fullScreen(); //Landscape
-size(500, 250); //Portrait
-int appWidth = width;  // displayWidth
-int appHeight = height; // displayHeight
+fullScreen(); //Landscape
+//size(500, 250); //Portrait
+int appWidth = displayWidth;  //  width
+int appHeight = displayHeight; //  height
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\t\t\tFullScreen, displayWidth:"+displayWidth, "displayHeight:"+displayHeight, "\n\t\t\t\t\t\t\t\tsize\t\t, width:"+width, "height:"+height);
+// mandatory println for AP exam
 //
+
 //Popultion
 float imageDivcoverX = appWidth * 1/20;
 float imageDivcoverY = appHeight * 1/16;
@@ -68,7 +70,7 @@ if ( imageHeightconverted1 > imageDivcoverHeight ) {
       imageHeightconverted1=imageDivcoverHeight; //makes while false, stops while
     }//End Check Infinite loop
     //Image Adjustment
-    imageWidthconverted1 *= 0.80; //;-= 1
+    imageWidthconverted1 *= 0.99; //; -= 1
     imageHeightconverted1 = imageWidthconverted1/image1coverAspectRatio_GreaterOne;
     println("Inspection of percent decrase:", imageWidthconverted1, imageHeightconverted1);
 }//End While
