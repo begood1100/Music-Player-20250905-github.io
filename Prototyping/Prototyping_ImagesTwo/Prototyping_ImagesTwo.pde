@@ -27,9 +27,9 @@ int i = 0; //index for ARRAYs
  */
 //Directory or Pathway, Concatenation
 String upArrow = "../../";
-String folder = "Lesson Dependancies Folder/Images/"; //**Akward
+String folder = "store/Images/"; //**Akward //Lesson Dependancies Folder
 String[] fileName = new String[numberOfImages];//2
-fileName[0] = "bike"; //Rename-Copy OS Function & MouseClick
+fileName[0] = "microphone"; //Rename-Copy OS Function & MouseClick //bike
 fileName[1] = "Old man portrait"; //Rename-Copy OS Function & MouseClick
 String[] fileExtension = new String[numberOfImages];
 fileExtension[0] = ".jpg"; //What is leftover after rename function
