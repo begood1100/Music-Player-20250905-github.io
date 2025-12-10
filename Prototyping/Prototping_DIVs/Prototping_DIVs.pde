@@ -263,11 +263,11 @@ float triGapRatio = 1.0/20.0; // 1/20 (gap between bar and triangle)
 
 
 // ===== BAR (rectangle) =====
-float forwardBarX = imageforwardX + imageforwardWidth * barXRatio;
-float forwardBarY = imageforwardY + imageforwardHeight * barYRatio;
+//float forwardBarX = imageforwardX + imageforwardWidth * barXRatio;
+//float forwardBarY = imageforwardY + imageforwardHeight * barYRatio;
 
-float forwardBarWidth  = imageforwardWidth  * barWRatio;
-float forwardBarHeight = imageforwardHeight * barHRatio;
+//float forwardBarWidth  = imageforwardWidth  * barWRatio;
+//float forwardBarHeight = imageforwardHeight * barHRatio;
 
 rect(forwardBarX, forwardBarY, forwardBarWidth, forwardBarHeight);
 
