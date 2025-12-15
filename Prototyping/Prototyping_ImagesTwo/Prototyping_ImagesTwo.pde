@@ -5,10 +5,10 @@
  */
 //
 //Display
-//fullScreen(); //Landscape
-size(500, 100); //Portrait, testing smaller DIVs ONLY
-int appWidth = width; //displayWidth
-int appHeight = height; //displayHeight
+fullScreen(); //Landscape
+//size(500, 100); //Portrait, testing smaller DIVs ONLY
+int appWidth =displayWidth; //  width
+int appHeight =displayHeight; //  height
 //println("Display VARS:", "appWidth:"+appWidth, "appHeight:"+appHeight);
 //println("\t\t\t\tFullScreen, displayWidth:\t"+displayWidth, "\tdisplayHeight:\t"+displayHeight, "\n\t\t\t\tSize\t, width:\t\t"+width, "\theight:\t\t"+height);
 //
@@ -56,8 +56,8 @@ if ( image[i] == null ) {
 }
 int[] imageWidth = new int[numberOfImages];
 int[] imageHeight = new int[numberOfImages];
-imageWidth[0] = 860; //Hardcoded, computer should be able to read this (Intermediate Code)
-imageHeight[0] = 529; //Hardcoded, see image-properties
+imageWidth[0] = 6000; //Hardcoded, computer should be able to read this (Intermediate Code)
+imageHeight[0] = 4000; //Hardcoded, see image-properties
 imageWidth[1] = 2800; //Hardcoded, computer should be able to read this (Intermediate Code)
 imageHeight[1] = 3500; //Hardcoded
 //Aspect Ratio
