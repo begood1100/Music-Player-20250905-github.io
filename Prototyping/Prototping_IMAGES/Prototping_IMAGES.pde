@@ -80,6 +80,6 @@ if ( imageHeightconverted1 > imageDivcoverHeight ) {
 //DIV
 rect( imageDivcoverX, imageDivcoverY, imageDivcoverWidth, imageDivcoverHeight );
 //
-//image( image1cover, imageDivcoverX, imageDivcoverY, imageDivcoverWidth, imageDivcoverHeight );
+image( image1cover, imageDivcoverX, imageDivcoverY, imageDivcoverWidth, imageDivcoverHeight );
 image( image1cover, imageDivcoverX, imageDivcoverY, imageWidthconverted1, imageHeightconverted1 );//Adjusted
 //
