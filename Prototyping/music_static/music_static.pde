@@ -18,3 +18,19 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
+//Global Variables
+Minim minim; 
+int numberOfSongs = 1;
+int numberOfSoundEffects = 1;
+AudioPlayer[] playist = new AudioPlayer[numberOfSongs];
+AudioPlayer[] SoundEffects = new AudioPlayer[numberOfSoundEffects ];
+int currentSong = numberOfSongs - numberOfSongs;
+//
+size(700, 500);
+//FullScreen();
+int appWidth = width;
+int appHeight = height;
+//
+//Music Loaig
+//
+pring
