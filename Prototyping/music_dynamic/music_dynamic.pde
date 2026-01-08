@@ -34,7 +34,7 @@ void setup() {
   //
   //Music Loading - STRUCTURED Review
   minim = new Minim(this); //Manditory
-  String upArrow = "../../../";
+  String upArrow = "../../";
   String musicFolder = "Music/"; //Developer Specific
   String soundEffectsFolder = "Sound Effects/"; //Developer Specific
   String normalFolder = "Normal/"; //Developer Specific
@@ -45,6 +45,7 @@ void setup() {
   String musicDirectory = upArrow + musicFolder + normalFolder; //Concatenation
   String soundEffectsDirectory = upArrow + musicFolder + soundEffectsFolder; //Concatenation
   String file = musicDirectory + songName1 + fileExtension_mp3; //TO BE Rewritten and deleted once file is LOADED
+  println("Here", file);
   playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
   file = soundEffectsDirectory + soundEffect1 + fileExtension_mp3; //Rewritting FILE
   soundEffects[currentSong] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
@@ -56,15 +57,14 @@ void setup() {
     println("The Play List or Sound Effects did not load properly");
     printArray(playList);
     printArray(soundEffects);
-    /*
-  println("Music Pathway", musicDirectory);
-     println("Full Music File Pathway", file);
-     */
+
+    println("Music Pathway", musicDirectory);
+    println("Full Music File Pathway", file);
   }//End of error check music
   //
   //Testing Sound
   //playList[currentSong].play();
-  soundEffects[currentSong].play();
+  //soundEffects[currentSong].play();
 } //End setup
 //
 void draw() {
