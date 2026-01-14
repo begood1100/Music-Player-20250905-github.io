@@ -1,4 +1,3 @@
-
 /* Creating Buttons - HoverOver in draw()
  - draw() updates mouseX&Y 60x per second
  - CANVAS will repeat all code
@@ -49,6 +48,7 @@ void setup() {
   playSymbolY2 = playDivY + playDivHeight * 1/2;
   playSymbolX3 = playSymbolX1;
   playSymbolY3 = playDivY + playDivHeight * 3/4;
+  //
   //DIVs
   rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
   rect(playDivX, playDivY, playDivWidth, playDivHeight);
