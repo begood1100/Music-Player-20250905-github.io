@@ -1,4 +1,3 @@
-
 /* List of Buttons and Code Colours
  - Quit
  - Play, Boolean Only
