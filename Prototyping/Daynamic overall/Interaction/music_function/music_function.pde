@@ -1,4 +1,3 @@
-
 /* Creating Buttons - HoverOver in draw()
  - Add Minim from Sketch / Import Library / Minim
  - Display: fullScreen() v. use shorter side as a Square based on fullScreen
@@ -6,7 +5,6 @@
  */
 //
 //Library - Minim
-
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
@@ -29,6 +27,7 @@ color playColourBackground, playColourSymbol, playColourBackgroundActivated, pla
 color quitBackground, quitBackgroundActivated;
 Boolean nightMode=false;
 //
+/*
 void settings() {
  println(displayWidth, displayHeight);
  int shorterSide = ( displayWidth > displayHeight ) ? displayHeight : displayWidth ; //Ternary Operator
