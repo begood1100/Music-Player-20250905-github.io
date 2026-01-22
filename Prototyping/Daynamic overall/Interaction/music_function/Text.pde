@@ -25,8 +25,8 @@ void textSetup() {
   titleFont = createFont(harrington, fontSize);
   //
   float fontSizeHarrington = 83.0;
-  float harringtonAspectRatio = fontSizeHarrington / stringDivHeight;
-  fontSize = stringDivHeight*harringtonAspectRatio;
+  //float harringtonAspectRatio = fontSizeHarrington / stringDivHeight;
+  //fontSize = stringDivHeight*harringtonAspectRatio;
   //
 } //End Text Setup
 //
