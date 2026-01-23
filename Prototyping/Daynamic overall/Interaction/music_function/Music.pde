@@ -3,12 +3,7 @@
  */
 //
 //Global Variables
-Minim minim; //initates entire class
-int numberOfSongs = 8; //Best Practice
-int numberOfSoundEffects = 1; //Best Practice
-AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
-AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffects];
-int currentSong = numberOfSongs - numberOfSongs; //ZERO, Math Property
+
 //
 void musicSetup() {
   //Music Loading - STRUCTURED Review
@@ -38,6 +33,7 @@ void musicSetup() {
   for ( int i=0; i<numberOfSongs; i++ ) {
     file = musicDirectory + songName[i] + fileExtension_mp3;
     playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+    metaDataFileLoading(); //See Meta Data Subprogram
     currentSong++;
   } //End File Loading
   currentSong=0;
