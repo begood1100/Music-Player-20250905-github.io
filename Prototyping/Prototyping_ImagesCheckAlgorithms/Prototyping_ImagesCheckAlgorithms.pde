@@ -20,10 +20,10 @@ float imageDivHeight = appHeight*4/5; // ** Make smaller to test height
 //Image Aspect Ratio Vars & Algorithm
 //Directory or Pathway, Concatenation
 String upArrow = "../../";
-String folder = "Lesson Dependancies Folder/Images/"; //**Akward
-String bike = "bike";
+String folder = "store/Images/"; //**Akward
+String headphone = "headphone";
 String fileExtensionJPG = ".jpg";
-String imagePathway1 = upArrow + folder + bike + fileExtensionJPG;
+String imagePathway1 = upArrow + folder + headphone + fileExtensionJPG;
 //println("Bike Pathway:", imagePathway1);
 //Image Loading & Aspect Ratio
 //
