@@ -1,4 +1,3 @@
-
 /* Creating Buttons - HoverOver in draw()
  - draw() updates mouseX&Y 60x per second
  - CANVAS will repeat all code
