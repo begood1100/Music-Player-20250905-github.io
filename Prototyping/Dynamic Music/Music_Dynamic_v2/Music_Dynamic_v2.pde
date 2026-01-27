@@ -1,4 +1,3 @@
-
 /* Copied from  Music Static
  - Hearing Music and Sound Effects
  - Reading Code with CTRL-T & Braces
@@ -25,6 +24,7 @@ int currentSong = numberOfSongs - numberOfSongs; //ZERO, Math Property
 void setup() {
   //Display
   size(700, 500); //width //height
+  pixelDensity(1); //Set pixel density to 1 to fix warning
   //fullScreen(); //displayWidth //displayHeight
   int appWidth = width; //Best Practice
   int appHeight = height;
@@ -143,7 +143,7 @@ void keyPressed() {
   }
   //if ( key=='S' || key=='s' ) song[currentSong].pause(); //Simple Stop, no double taps
   //
-  if ( key=='S' | key=='s' ) {
+  if ( key=='S' || key=='s' ) {
     if ( playList[currentSong].isPlaying() ) {
       playList[currentSong].pause(); //single tap
     } else {
