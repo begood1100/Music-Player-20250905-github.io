@@ -13,9 +13,8 @@
  - Note: Hard Drive Registery or address
  
  - Library will not execute since not using full compiler
- 
+ //Library - Minim
  */
-//Library - Minim
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
